@@ -46,6 +46,7 @@ module "kube-hetzner" {
   traefik_redirect_to_https = false
   enable_metrics_server = false
   allow_scheduling_on_control_plane = true
+  enable_cert_manager = false
 }
 
 provider "hcloud" {
