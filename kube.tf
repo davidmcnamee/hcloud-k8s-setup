@@ -10,6 +10,7 @@ resource "tls_private_key" "example" {
 }
 
 module "kube-hetzner" {
+  cluster_name = "kube-hetzner"
   providers = {
     hcloud = hcloud
   }
@@ -41,6 +42,10 @@ module "kube-hetzner" {
   ]
   load_balancer_type     = "lb11"
   load_balancer_location = "fsn1"
+  restrict_outbound_traffic = false
+  traefik_redirect_to_https = false
+  enable_metrics_server = false
+  allow_scheduling_on_control_plane = true
 }
 
 provider "hcloud" {

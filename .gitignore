@@ -1,4 +1,4 @@
 .terraform*
 terraform*
 env.tfvars
-k3s_*.yaml
+kube-hetzner_*.yaml
