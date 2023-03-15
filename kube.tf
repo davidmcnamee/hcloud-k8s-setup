@@ -44,7 +44,7 @@ module "kube-hetzner" {
 }
 
 provider "hcloud" {
-  token = local.hcloud_token
+  token = var.hcloud_token
 }
 
 terraform {

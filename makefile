@@ -1,7 +1,7 @@
 
 .PHONY: up
 up:
-	terraform apply -auto-approve
+	terraform apply -auto-approve -var-file="env.tfvars"
 
 .PHONY: down
 down:
